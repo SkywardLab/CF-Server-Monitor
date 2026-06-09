@@ -932,7 +932,7 @@ const addServer = async () => {
 
 const getInstallCommand = (serverId) => {
   const HOST = API_BASE
-  return `curl -sL ${HOST}/install.sh | bash -s install ${serverId} ${apiSecret.value} ${HOST}/update 60 http`
+  return `curl -sL ${HOST}/install.sh | bash -s install ${serverId} '${apiSecret.value}' ${HOST}/update 60 http`
 }
 
 const getUninstallCommand = () => {
@@ -955,7 +955,7 @@ const getCustomInstallCommand = () => {
   }
   const shell = targetOs.value === 'alpine' ? 'sh' : 'bash'
   const script = targetOs.value === 'alpine' ? 'install-alpine.sh' : 'install.sh'
-  return `curl -sL ${HOST}/${script} | ${shell} -s install ${copyServerId.value} ${apiSecret.value} ${HOST}/update ${reportInterval.value} ${pingMode.value}`
+  return `curl -sL ${HOST}/${script} | ${shell} -s install ${copyServerId.value} '${apiSecret.value}' ${HOST}/update ${reportInterval.value} ${pingMode.value}`
 }
 
 const copyCustomCmd = async () => {
