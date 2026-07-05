@@ -737,11 +737,10 @@ npm run deploy
 定时任务
 
 ```
-http://localhost:8787/cdn-cgi/handler/scheduled?cron=*/1+*+*+*+* // 每分钟执行一次（离线检测）
-http://localhost:8787/cdn-cgi/handler/scheduled?cron=0+*+*+*+* // 每小时执行一次（合并任务）
-http://localhost:8787/cdn-cgi/handler/scheduled?cron=*+*+1+*+* // 每月一号执行一次（测试使用）
-http://localhost:8787/cdn-cgi/handler/scheduled?cron=*+*+8+*+* // 每月8号执行一次（测试使用）
-http://localhost:8787/cdn-cgi/handler/scheduled?cron=0+12+*+*+* // 每天12点执行一次（测试使用）
+https://localhost:8787/cdn-cgi/handler/scheduled?cron=*/1+*+*+*+* // 每分钟执行一次（离线检测）
+https://localhost:8787/cdn-cgi/handler/scheduled?cron=0+*+*+*+* // 每小时执行一次（合并任务）
+https://localhost:8787/cdn-cgi/handler/scheduled?cron=0+0+*+*+0 // 每周执行一次（测试使用）
+https://localhost:8787/cdn-cgi/handler/scheduled?cron=0+12+*+*+* // 每天12点执行一次（测试使用）
 ```
 
 ### 本地测试数据
