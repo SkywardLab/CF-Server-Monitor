@@ -1131,7 +1131,9 @@ const fetchCurrentStatus = async (incomingData) => {
       appendDataToChart(charts.loss, 2, dataTimestamp, data.loss_cm, false, true)
       appendDataToChart(charts.loss, 3, dataTimestamp, data.loss_bd, false, true)
       appendLoadChartData(dataTimestamp, data.load_avg)
+    }
 
+    if (data.last_updated) {
       lastUpdateText.value = formatTimestamp(data.last_updated)
     }
   } catch (e) {
